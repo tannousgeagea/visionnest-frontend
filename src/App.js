@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Home from './pages/home';
+import NavBar from './components/common/NavBar';
+import Footer from './components/common/Footer';
+import Hero from './components/common/hero';
+import Features from './components/features/features';
+import {  UseAuth } from './contexts/AuthContext'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Hero />
+      <Features />
+      <Footer />
+
     </div>
   );
 }

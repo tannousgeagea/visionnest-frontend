@@ -1,0 +1,36 @@
+.footer-container {
+    padding: 5px 0;
+    background-color: rgba(128, 128, 128, 0.521);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.author-name {
+    font-size: 16px;  /* Adjust size as needed */
+    color: #333;  /* Example color */
+    margin-left: 20px;
+}
+
+.social-icons a {
+    color: black;
+    justify-content: flex-end;
+    max-width: 100%;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.social-icons a:hover {
+    color: #555555d7;
+    transform: scale(1.1);
+    z-index: 10;
+}

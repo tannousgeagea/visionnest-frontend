@@ -1,0 +1,57 @@
+.feature-card-block {
+    border: 1px solid #cccccc; /* Light gray border, feel free to change the color */
+    border-radius: 5px;
+    height: auto; /* Adjust if necessary */
+    width: 350px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #35353556;
+    transition: transform 0.5s ease;
+    filter: brightness(70%);
+}
+
+.feature-card-block:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+    z-index: 5;
+}
+
+.feature-card-top {
+    background-color: #666666fd;
+    color: white;
+    text-align: center; /* Centers text horizontally */
+    display: flex;
+    flex-direction: row; /* Aligns children (icon and h3) in a row */
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Centers children horizontally */
+    height: 50px; /* Fixed height, adjust as necessary */
+    border-radius: 2px;
+}
+
+.feature-card-heading {
+    margin: 0 10px; /* Adds horizontal margin for spacing, removes top/bottom margin */
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.card-text {
+    font-size: 16px; /* Standard text size */
+    color: #333; /* Medium grey text */
+    padding-left: 20px; /* Align text properly with bullet points */
+    list-style-type: disc; /* Standard disc type bullet points */
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin: 15px;
+}
+
+    .card-text li {
+        margin-bottom: 10px;
+    }
+
+.card-icon {
+    max-width: 25px;
+    height: 25px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
