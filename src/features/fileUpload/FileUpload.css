@@ -1,0 +1,26 @@
+.file-uploader-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 100px;  /* Fixed width for each thumbnail */
+    height: 100px; /* Fixed height for each thumbnail */
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 5px;  /* Optional: for rounded corners */
+    transition: transform 0.5s ease;
+    filter: brightness(50%);
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}

@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
+import Hero from '../components/common/hero';
+import Features from '../components/features/features';
 import './home.css';
 
 const Home = () => {
@@ -12,7 +14,8 @@ const Home = () => {
                 <meta property="og:title" content="VisionNest: have a chat with your data" /> 
             </Helmet>
 
-            
+            <Hero />
+            <Features />
 
         </div>
     )

@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+.galery {
+  max-width: 800px;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border-style: dashed;
+  border-width: 2px;
+  background-color: rgba(128, 128, 128, 0.219);
+  flex-direction: row;
+  height: 1200px;
+}

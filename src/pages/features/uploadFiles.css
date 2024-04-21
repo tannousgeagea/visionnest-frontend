@@ -1,0 +1,125 @@
+.upload-page-container {
+    background-color: #424242e6;  /* Slightly lighter grey for the container for some contrast */
+    padding: 0px;
+    padding-top: 20px; 
+    border-radius: 2px;         /* Optional: rounds the corners of the container */
+    width: 100%;
+}
+
+.upload-page-header {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+}
+
+
+#upload-page-content {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 1rem !important;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    height: calc(100vh - 4rem);
+    justify-items: stretch;
+    margin-top: 0;
+    max-height: calc(100vh - 4rem);
+    min-height: 0;
+    padding-bottom: 1rem !important;
+    max-width: 72rem;
+    margin: auto;
+}
+
+
+#upload-page-content .pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: white;
+    height: 65px;
+    gap: 1rem;
+    margin: auto;
+
+  }
+
+
+.uploadBatchSelector {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.uploadTagSelector {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+}
+
+.separator {
+    height: 5px;
+    background-color: #333333; /* Solid color example */
+    background-image: linear-gradient(to right, #ccc, #333333, #ccc); /* Gradient example */
+    margin-top: 15px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+#uploadContainer {
+    display: flex;
+    flex: 1 1 0%;
+    max-width: 100%;
+    min-height: 0;
+    position: relative;
+    width: 100%;
+    border-style: dashed;
+    border-width: 1px;
+}
+
+.uploadButton {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: auto;
+}
+
+.card-img-container {
+    transition: transform 0.5s ease; /* Smooth transition for scaling */
+    display: inline-block; /* Ensures that the container can scale */
+    overflow: visible; /* Allow elements to overflow outside of the container */
+    filter: brightness(40%); /* Decreases brightness to 50% of the original */
+}
+
+.card-img-container:hover {
+    transform: scale(1.05); /* Scale up the container */
+    z-index: 100; /* Make sure the scaled container is above other content */
+    filter: brightness(80%); /* Decreases brightness to 50% of the original */
+}

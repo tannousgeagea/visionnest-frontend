@@ -12,7 +12,7 @@
 }
 
 .feature-card-block:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     filter: brightness(100%);
     z-index: 5;
 }
@@ -44,6 +44,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     margin: 15px;
+    margin-bottom: 150px;
 }
 
     .card-text li {
@@ -54,4 +55,18 @@
     max-width: 25px;
     height: 25px; /* Fixed height for images */
     object-fit: cover; /* Maintain aspect ratio */
+}
+
+.get-start-button {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-bottom: 20px;
+    /* margin-left: 70px; */
+    display: block;
+    
 }
