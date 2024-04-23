@@ -1,6 +1,7 @@
-.button-36 {
+.upload-file-button {
     background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
     border-radius: 8px;
+    border-color: #455EB5;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
@@ -17,17 +18,19 @@
     touch-action: manipulation;
   }
   
-  .button-36:hover {
+  .upload-file-button:hover {
     box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-    transition-duration: .1s;
-    transform: scale(1.05);
+    transition-duration: .3s;
+    transform: scale(1.1);
   }
   
   
-  .button-text {
+  .upload-button-text {
       font-size: 16px;
       font-weight: 100;
       line-height: 1rem;
+      padding-left: 20px;
+      padding-right: 20px;
       align-items: center;
       text-align: center;
       justify-content: center;

@@ -1,0 +1,29 @@
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border: 2px dashed #ccc;
+    position: relative;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.select-file-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.image-gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    margin: 10px;
+    width: 100px;
+    height: auto;
+}

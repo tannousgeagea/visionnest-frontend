@@ -1,4 +1,6 @@
 import React from "react";
+
+import { useState } from "react";
 import { Helmet } from 'react-helmet'
 import SelectFiles from "../../features/fileUpload/FileUpload";
 import './uploadFiles.css'
@@ -8,9 +10,23 @@ import Button from '../../components/ui/button';
 import fileUpload from '../../assets/icons/datei-upload.png'
 import folderUpload from '../../assets/icons/folder-upload.png'
 import FileUploadButton from '../../features/fileUpload/FileUploadButton'
+import ImageGallery from '../../features/fileUpload/image-gallery'
 
+import UploadContainer from "../../features/fileUpload/upload-container";
 
 const UploadFilesPage = () => {
+
+    const [images, setImages] = useState([]);
+
+    const handleFileSelect = (e) => {
+        const files = Array.from(e.target.files).map((file) =>
+            URL.createObjectURL(file)
+        );
+
+        setImages((prevImages) => [...prevImages, ...files]);
+        e.target.value = null;
+    };
+
     return (
 
         <div className="upload-page-container">
@@ -40,19 +56,12 @@ const UploadFilesPage = () => {
                 </div>
 
                 <div id="uploadContainer">
-                    <div className="uploadButton">
-                        <Button 
-                            icon={fileUpload}
-                            text='select file'
-                        />
-                        <Button 
-                            icon={folderUpload}
-                            text='select folder'
-                        />
+                    <UploadContainer />
+                    {/* <div className="uploadButton">
+                        <UploadContainer />
 
-                    </div>
+                    </div> */}
 
-                    < FileUploadButton onFileSelect={SelectFiles} />
                 </div>
             </div> 
         </div>
