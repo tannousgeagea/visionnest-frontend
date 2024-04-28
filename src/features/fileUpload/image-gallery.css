@@ -1,13 +1,27 @@
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
+.image-gallery-container {
+  margin: 100px auto;
+  width: 100%;
+  text-align: center;
 }
 
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap as needed */
+  justify-content: center; /* Centers items horizontally */
+  gap: 10px; /* Provides space between items */
+  padding: 20px; /* Padding around the entire gallery */
+}
 .thumbnail {
-    width: 150px;
+    width: 80px;
     height: auto;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    display: block;
+    transition: all 0.5s ease;
+    filter: brightness(50%);
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
 }

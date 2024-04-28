@@ -2,17 +2,11 @@ import React from "react";
 
 import { useState } from "react";
 import { Helmet } from 'react-helmet'
-import SelectFiles from "../../features/fileUpload/FileUpload";
 import './uploadFiles.css'
 
 import TextLabel from '../../components/ui/label-text';
-import Button from '../../components/ui/button';
-import fileUpload from '../../assets/icons/datei-upload.png'
-import folderUpload from '../../assets/icons/folder-upload.png'
-import FileUploadButton from '../../features/fileUpload/FileUploadButton'
 import ImageGallery from '../../features/fileUpload/image-gallery'
 
-import UploadContainer from "../../features/fileUpload/upload-container";
 
 const UploadFilesPage = () => {
 
@@ -56,11 +50,25 @@ const UploadFilesPage = () => {
                 </div>
 
                 <div id="uploadContainer">
-                    <UploadContainer />
-                    {/* <div className="uploadButton">
-                        <UploadContainer />
 
-                    </div> */}
+                <div className="upload-container-content">
+                    <ImageGallery />
+                </div>
+
+                {/* {images.length === 0 ? (
+                        <div className="upload-container-content">
+                            <FileUploadButton handleFile={handleFileSelect} />
+                        </div>
+                    ) : (
+
+                        <div className="upload-container-content after" >
+                            <div className="upload-buttom after">
+                                <FileUploadButton handleFile={handleFileSelect} />
+                            </div>
+                            <ImageGallery />
+                        </div>
+                    )} */}
+
 
                 </div>
             </div> 

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './FileUploadButton.css'
+import './upload-button.css'
 
 import fileUpload from '../../assets/icons/datei-upload.png'
 

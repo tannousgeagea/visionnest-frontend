@@ -4,6 +4,7 @@
     padding-top: 20px; 
     border-radius: 2px;         /* Optional: rounds the corners of the container */
     width: 100%;
+    height: auto;
 }
 
 .upload-page-header {
@@ -39,6 +40,7 @@ h1 {
     max-width: 72rem;
     margin: auto;
     border-radius: 2px;
+    overflow: scroll;
 }
 
 
@@ -99,28 +101,48 @@ input {
     flex: 1 1 0%;
     max-width: 100%;
     min-height: 0;
+    height: 100%;
     position: relative;
     width: 100%;
     border-style: dashed;
     border-width: 1px;
-}
-
-.uploadButton {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
     margin: auto;
 }
 
-.card-img-container {
-    transition: transform 0.5s ease; /* Smooth transition for scaling */
-    display: inline-block; /* Ensures that the container can scale */
-    overflow: visible; /* Allow elements to overflow outside of the container */
-    filter: brightness(40%); /* Decreases brightness to 50% of the original */
+
+.upload-container-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-right: 20px;
+    margin: auto;
+    height: auto;
+    overflow: scroll;
 }
 
-.card-img-container:hover {
-    transform: scale(1.05); /* Scale up the container */
-    z-index: 100; /* Make sure the scaled container is above other content */
-    filter: brightness(80%); /* Decreases brightness to 50% of the original */
+.upload-container-content.after {
+    display: grid;
+    margin: 0px;
+    border: #333333 dashed;
+    border-width: 2px;
+    border-radius: 5px;
+    flex-direction: column;  /* Aligns children vertically */
+    justify-content: flex-start;  /* Aligns children to the top */
+    align-items: center;  /* Keeps children centered horizontally */
+    position: relative; /* Adds some space at the top inside the container */
+    box-sizing: border-box;
+    height: auto;
+}
+
+
+.upload-buttom.after {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    align-self: flex-start;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    margin-left: auto;
 }
