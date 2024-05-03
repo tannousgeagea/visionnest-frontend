@@ -3,8 +3,9 @@ import './upload-button.css'
 
 import fileUpload from '../../assets/icons/datei-upload.png'
 
-const FileUploadButton = ({ handleFile }) => {
+const FileUploadButton = ({ onChange, onClick }) => {
     const fileInputRef = useRef(null);
+    
     const handleClick = () => {
         // when the button is clicked, triger the file input click event
         if(fileInputRef.current) {
@@ -20,10 +21,10 @@ const FileUploadButton = ({ handleFile }) => {
                 id='fileInput'
                 ref={fileInputRef}
                 style={{ display: 'none' }}
-                onChange={handleFile}
+                onChange={onChange}
             />
 
-            <button id='selectFileButton' onClick={handleClick} className='upload-file-button'>
+            <button id='selectFileButton' onClick={onClick} className='upload-file-button'>
                 <span className='upload-button-text'>
                     <img src={fileUpload} alt="Button icon" className="button-icon"/>
                     select files

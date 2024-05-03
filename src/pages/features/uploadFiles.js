@@ -1,25 +1,42 @@
 import React from "react";
 
+import { useRef } from 'react';
 import { useState } from "react";
 import { Helmet } from 'react-helmet'
 import './uploadFiles.css'
 
 import TextLabel from '../../components/ui/label-text';
 import ImageGallery from '../../features/fileUpload/image-gallery'
-
+import FileUploadButton from "../../components/ui/upload-button";
+import useUpload from "../../hooks/use-upload";
 
 const UploadFilesPage = () => {
-
+    const [file, setFile] = useState(null);
     const [images, setImages] = useState([]);
+    const { uploadStatus, handleUpload, handleFileChange } = useUpload()
 
-    const handleFileSelect = (e) => {
-        const files = Array.from(e.target.files).map((file) =>
-            URL.createObjectURL(file)
-        );
+    // const handleFileSelect = (e) => {
+    //     const files = Array.from(e.target.files).map((file) =>
+    //         URL.createObjectURL(file)
+    //     );
 
-        setImages((prevImages) => [...prevImages, ...files]);
-        e.target.value = null;
+    //     setImages((prevImages) => [...prevImages, ...files]);
+    //     e.target.value = null;
+    // };
+
+    const fileInputRef = useRef(null);
+    
+    const handleClick = () => {
+        // when the button is clicked, triger the file input click event
+        if(fileInputRef.current) {
+            fileInputRef.current.click();
+        }
     };
+
+    const upload = () => {
+        handleUpload(images);
+    };
+
 
     return (
 
@@ -51,9 +68,12 @@ const UploadFilesPage = () => {
 
                 <div id="uploadContainer">
 
-                <div className="upload-container-content">
-                    <ImageGallery />
-                </div>
+                    <div className="upload-container-content">
+                        <FileUploadButton 
+                            onChange={handleFileChange}
+                            onClick={handleClick}
+                        />
+                    </div>
 
                 {/* {images.length === 0 ? (
                         <div className="upload-container-content">
