@@ -124,7 +124,7 @@ input {
     display: grid;
     margin: 0px;
     border: #333333 dashed;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 5px;
     flex-direction: column;  /* Aligns children vertically */
     justify-content: flex-start;  /* Aligns children to the top */
@@ -140,9 +140,11 @@ input {
     align-items: flex-end;
     justify-content: end;
     align-self: flex-start;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 16px;
     cursor: pointer;
-    margin: 10px 0;
+    gap: 1.5rem;
+    margin: 10px 10px;
     margin-left: auto;
+    position: relative;
 }

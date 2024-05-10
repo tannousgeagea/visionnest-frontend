@@ -5,6 +5,10 @@ async function uplaodImages(formData) {
         const response = await fetch(`${UploadImageUrl}/upload_images/`, {
             method: 'POST',
             body: formData,
+            headers: {
+                "Content-Type": "multipart/form-data",
+                "accept": "application/json", 
+            }
         });
 
         if (!response.ok) {
